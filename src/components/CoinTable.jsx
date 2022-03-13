@@ -4,7 +4,6 @@ import axios from 'axios';
 import { Pagination } from '@material-ui/lab';
 import {
   Container,
-  createTheme,
   LinearProgress,
   Table,
   TableBody,
@@ -20,16 +19,9 @@ import {
 import { CryptoContext } from '../context/cryptoContext';
 import { CoinList } from '../config/api';
 import { makeStyles } from '@material-ui/styles';
-import { numberWithCommas } from '../components/Carousel';
+import { darkTheme } from '../styles/darkTheme';
 
-const darkTheme = createTheme({
-  palette: {
-    primary: {
-      main: '#fff',
-    },
-    type: 'dark',
-  },
-});
+import { numberWithCommas } from '../components/Carousel';
 
 const useStyles = makeStyles(() => ({
   row: {

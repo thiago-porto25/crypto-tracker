@@ -6,12 +6,12 @@ import {
   Select,
   Toolbar,
   Typography,
-  createTheme,
   ThemeProvider,
 } from '@material-ui/core';
 import { useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import { CryptoContext } from '../context/cryptoContext';
+import { darkTheme } from '../styles/darkTheme';
 
 const useStyles = makeStyles(() => ({
   title: {
@@ -27,14 +27,6 @@ export default function Header() {
   const { currency, setCurrency } = useContext(CryptoContext);
   const classes = useStyles();
   const navigate = useNavigate();
-  const darkTheme = createTheme({
-    palette: {
-      type: 'dark',
-      primary: {
-        main: '#fff',
-      },
-    },
-  });
 
   const handleLogoClick = () => navigate('/');
 
