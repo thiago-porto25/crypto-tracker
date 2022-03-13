@@ -77,7 +77,7 @@ export default function Carousel() {
 
   useEffect(() => {
     fetchTrendingCoins();
-  }, [currency, fetchTrendingCoins]);
+  }, [fetchTrendingCoins]);
 
   return (
     <div className={classes.carousel}>
